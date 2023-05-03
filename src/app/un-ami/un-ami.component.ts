@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./un-ami.component.css']
 })
 export class UnAmiComponent {
-
 }

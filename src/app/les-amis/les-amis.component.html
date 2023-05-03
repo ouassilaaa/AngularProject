@@ -3,8 +3,17 @@
     <a href="#" class="list-group-item list-group-item-action active">
       Holla mes supers amis
     </a>
-    <a href="#" class="list-group-item list-group-item-action">Ami 1</a>
-    <a href="#" class="list-group-item list-group-item-action">Ami 2</a>
-    <a href="#" class="list-group-item list-group-item-action">Ami 3</a>
-    <a href="#" class="list-group-item list-group-item-action disabled">Ami 4</a>
+    <a href="#" class="list-group-item list-group-item-action"><app-un-ami></app-un-ami></a>
+    <a href="#" class="list-group-item list-group-item-action"><app-un-ami></app-un-ami></a>
+    <a href="#" class="list-group-item list-group-item-action"><app-un-ami></app-un-ami></a>
+    <a href="#" class="list-group-item list-group-item-action disabled"><app-un-ami></app-un-ami></a>
   </div>
+
+  <div class="les-amis p-3">
+    <button class="btn btn-success" [disabled]="authorizeAmi">Ajouter Ami</button>
+    <!-- On pourrait aussi Binder la propriété innerText (ou autre) pour injecter dynamiquement des données dans des éléments html -->
+    <!-- Ca fonctionne mais pour afficher dynamiquement des choses il vaut mieux passer par string interpolation {{}} -->
+    <p [innerText]="authorizeAmi"></p>
+    <h2 class="title-les-amis">La liste des copains : </h2>
+    <app-un-ami></app-un-ami>
+</div>
